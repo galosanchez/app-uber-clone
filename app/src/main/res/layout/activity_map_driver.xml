@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue_700"
+    tools:context=".activity.MapDriverActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/fragment_toolbar"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/margin_12dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_12dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:backgroundTint="#2B2F4B"
+        android:elevation="1dp"
+        app:cardCornerRadius="@dimen/margin_20dp">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentMap"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

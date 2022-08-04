@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.galosanchez.appuberclone">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppUberClone">
+        <activity
+            android:name=".activity.ProfileDriverActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.MapDriverActivity"/>
+
+        <receiver
+            android:name=".receivers.AcceptReceiver"
+            android:enabled="true" />
+        <receiver
+            android:name=".receivers.CancelReceiver"
+            android:enabled="true" />
+
+        <service
+            android:name=".services.FirebaseMessagingClient"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activity.ProfileClientActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.MapClientActivity" />
+        <activity
+            android:name=".activity.MapDriverBookingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MapClientBookingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SearchDriverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RouteActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.MapClientActivity" />
+        <activity
+            android:name=".activity.MapDriverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MapClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RegisterDriverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RegisterClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+    </application>
+
+</manifest>

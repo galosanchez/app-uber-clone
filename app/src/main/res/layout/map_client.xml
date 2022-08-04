@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_700"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/fragment_toolbar"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/margin_12dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_12dp"
+        android:layout_marginBottom="@dimen/margin_20dp"
+        android:backgroundTint="#2B2F4B"
+        android:elevation="1dp"
+        app:cardCornerRadius="@dimen/margin_20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragmentMap"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/margin_32dp"
+                    android:src="@drawable/icon_person_location"
+                    android:visibility="visible"
+                    tools:ignore="ImageContrastCheck" />
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginStart="@dimen/margin_12dp"
+        android:layout_marginEnd="@dimen/margin_12dp"
+        android:layout_marginBottom="@dimen/margin_20dp"
+        android:backgroundTint="#2B2F4B"
+        android:elevation="1dp"
+        app:cardCornerRadius="@dimen/margin_20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    app:srcCompat="@drawable/img_places" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/editTextOrigin"
+                        style="@style/EditTextMapEnable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#2B2F4B"
+                        android:hint="Selecciona el lugar de partida"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/margin_12dp"
+                        android:textColorHint="@color/white_opt38"
+                        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginHorizontal="@dimen/margin_12dp"
+                        android:layout_weight="0"
+                        android:background="@color/white_opt87" />
+
+                    <EditText
+                        android:id="@+id/editTextDestination"
+                        style="@style/EditTextMapEnable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#2B2F4B"
+                        android:hint="Destino"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/margin_12dp"
+                        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/textButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Text"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    />
+
+                <Button
+                    android:id="@+id/button3"
+                    style="@style/ButtonWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/button4"
+                    style="@style/ButtonGreen"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    android:layout_weight="0"
+                    android:text="ACEPTAR" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

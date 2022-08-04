@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_700"
+    android:orientation="vertical"
+    tools:context=".activity.ProfileClientActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/fragment_toolbar"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:backgroundTint="#2B2F4B"
+        android:layout_marginHorizontal="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        app:cardCornerRadius="@dimen/margin_20dp"
+        android:elevation="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_20dp"
+            android:orientation="vertical">
+
+            <!-- Media -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewImageProfile"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/blue_700"
+                android:elevation="0dp"
+                app:cardCornerRadius="100dp">
+
+                <ImageView
+                    android:id="@+id/imageViewPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_avatar_default"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextName"
+                    style="@style/EditTextNightHalf"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+
+
+                <ImageView
+                    android:background="@drawable/background_half_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="0"
+                    android:paddingEnd="@dimen/margin_24dp"
+                    app:srcCompat="@drawable/ic_edit"
+                    app:tint="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/buttonSave"
+            style="@style/ButtonGreen"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="@dimen/margin_16dp"
+            android:layout_marginBottom="@dimen/margin_12dp"
+            android:text="@string/button_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

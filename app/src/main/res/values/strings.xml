@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Uber Clone</string>
+    <!-- TextView -->
+    <string name="title_uber">Uber clone</string>
+    <string name="description_app">Aplicación similar a Uber. Estamos construyendo nuevas formas de apoyarte</string>
+    <string name="title_register">Registrarse</string>
+    <string name="text_forget_password">¿Olvidate tu contraseña?</string>
+    <string name="text_not_account">¿No tienes cuenta?</string>
+    <string name="text_go_register">\  Regístrate</string>
+    <string name="text_information_vehicle">Información del vehículo</string>
+    <string name="text_information_driver">Información del conductor</string>
+    <string name="text_client">Cliente</string>
+    <string name="text_driver">Conductor</string>
+
+    <string name="text_logout">Cerrar sesión</string>
+    <string name="text_route">Solicitar ruta</string>
+    <string name="text_connect">Conectarse</string>
+    <string name="text_profile">Perfil</string>
+    <string name="text_disconnect">Desconectarse</string>
+
+    <!-- EditText -->
+    <string name="text_name_user">Nombre completo</string>
+    <string name="text_email">Correo electrónico</string>
+    <string name="text_password">Contraseña</string>
+    <string name="text_confirm_password">Confirmar contraseña</string>
+    <string name="text_vehicle_brand">Marca</string>
+    <string name="text_vehicle_plate">Placa</string>
+    <string name="text_subtitle">Subtitle</string>
+
+
+    <!-- Text Buttons -->
+    <string name="button_client">SOY CLIENTE</string>
+    <string name="button_driver">SOY CONDUCTOR</string>
+    <string name="button_register">REGISTRARSE</string>
+    <string name="button_login">Iniciar sesión</string>
+    <string name="button_save">Guardar</string>
+    <string name="button_origin">ORIGEN</string>
+    <string name="button_destination">DESTINO</string>
+    <string name="button_solicitar">SOLICITAR</string>
+    <string name="button_cancel">CANCELAR</string>
+
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_700"
+    tools:context=".activity.MainActivity" >
+
+    <ImageView
+        android:id="@+id/imageViewHome"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/margin_32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_uberclone_home" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        style="@style/H1Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_32dp"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:letterSpacing="@dimen/text_spacing4"
+        android:text="@string/title_uber"
+        android:textColor="@color/green_500_opt87"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewHome" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/Body2Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_32dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_32dp"
+        android:lineSpacingExtra="4dp"
+        android:letterSpacing="@dimen/text_spacing4"
+        android:text="@string/description_app"
+        android:textColor="@color/white_opt87"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <Button
+        android:id="@+id/buttonDriver"
+        style="@style/ButtonGreen"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:text="@string/button_driver"
+        app:layout_constraintBottom_toTopOf="@+id/buttonClient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonClient"
+        style="@style/ButtonWhite"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_32dp"
+        android:text="@string/button_client"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
